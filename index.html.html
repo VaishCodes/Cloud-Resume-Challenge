@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Vaishnavi Raghavan – Business Analyst & Data Operations</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --color-bg-header: #000000;
+      --color-bg-header-soft: #FAF9FF;
+      --color-bg-skills: #FAF9FF;
+      --color-bg-education: #F7F6F4;
+      --color-bg-projects: #F9FAFA;
+      --color-bg-footer: #161616;
+      --color-text-dark: #161616;
+      --color-text-muted: #4b5563;
+      --color-accent: #007EFF;
+      --color-accent-soft: #E1F0FF;
+      --color-border: #d1d5db;
+      --radius-card: 10px;
+      --shadow-soft: 0 10px 20px rgba(15, 23, 42, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family:
+        "Madefor-Text",
+        "Madefor Text",
+        "Madefor",
+        "Helvetica Neue",
+        "Helvetica",
+        "Arial",
+        "メイリオ",
+        "meiryo",
+        "ヒラギノ角ゴ pro w3",
+        "hiragino kaku gothic pro",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        "Noto Sans",
+        "Fira Sans",
+        Ubuntu,
+        Oxygen,
+        "Oxygen Sans",
+        Cantarell,
+        "Droid Sans",
+        "Lucida Grande",
+        ui-sans-serif,
+        system-ui,
+        sans-serif;
+      color: var(--color-text-dark);
+      line-height: 1.6;
+      background-color: #F9FAFA;
+    }
+
+    a {
+      color: var(--color-accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    h1, h2, h3, h4 {
+      margin-top: 0;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--color-text-dark);
+      font-family:
+        "Madefor Display",
+        "Madefor",
+        "Madefor-Text",
+        "Helvetica Neue",
+        "Helvetica",
+        "Arial",
+        "メイリオ",
+        "meiryo",
+        "ヒラギノ角ゴ pro w3",
+        "hiragino kaku gothic pro",
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        "Noto Sans",
+        ui-sans-serif,
+        system-ui,
+        sans-serif;
+    }
+
+    section {
+      padding: 70px 16px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-heading {
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .muted {
+      color: var(--color-text-muted);
+    }
+
+    /* Header band */
+    .header-band {
+      background: linear-gradient(135deg, #000000 0%, #161616 40%, hsl(263, 83%, 19%) 100%);
+      color: #f9fafb;
+      text-align: right;
+      padding: 110px 24px 90px;
+      display: flex;
+      align-items: center;
+    }
+
+    .header-inner {
+      max-width: 900px;
+      margin-left: auto;
+    }
+
+    .header-name {
+      font-size: 3rem;
+      margin-bottom: 0.4rem;
+      color: #f9fafb;
+    }
+
+    .header-role {
+      font-size: 1.4rem;
+      margin-top: 0; 
+      margin-bottom: 0.2rem;
+      color: #e5f3f7;
+    }
+
+    .header-tagline {
+      font-size: 1.2rem;
+      margin-top: 0; 
+      margin-bottom: 0.3rem;
+      color: hsl(193, 100%, 89%);
+    }
+
+    .header-meta {
+      font-size: 0.98rem;
+      margin-bottom: 1.8rem;
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .header-meta span {
+      opacity: 0.9;
+    }
+
+    .header-meta a {
+      color: #fefefe;
+      font-weight: 500;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .header-buttons {
+      display: flex;
+      gap: 0.85rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 130px;
+      padding: 0.7rem 1.5rem;
+      border-radius: 999px;
+      border: 2px solid transparent;
+      font-size: 0.98rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background-color: #f9fafb;
+      color: var(--color-bg-header);
+      border-color: #f9fafb;
+    }
+
+    .btn-primary:hover {
+      background-color: transparent;
+      color: #f9fafb;
+      border-color: #f9fafb;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.25);
+      text-decoration: none;
+    }
+
+    .btn-ghost {
+      background-color: transparent;
+      color: #f9fafb;
+      border-color: #9fbfcc;
+    }
+
+    .btn-ghost:hover {
+      background-color: rgba(15, 23, 42, 0.35);
+      border-color: #f9fafb;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.25);
+      text-decoration: none;
+    }
+
+    /* About */
+    .about-section {
+      background-color: #ffffff;
+    }
+
+    .about-text {
+      max-width: 750px;
+      font-size: 1.02rem;
+      color: var(--color-text-muted);
+    }
+
+    .about-text p {
+      margin-bottom: 0.9rem;
+    }
+
+    /* Skills */
+    .skills-section {
+      background-color: var(--color-bg-skills);
+    }
+
+    .skills-groups {
+      display: grid;
+      gap: 1.6rem;
+    }
+
+    .skills-subheading {
+      font-size: 1.25rem;
+      margin: 0 0 0.85rem;
+      color: #0f2933;
+      letter-spacing: 0.01em;
+    }
+
+    .chips-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 0.8rem;
+    }
+
+    .chip {
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 999px;
+      padding: 0.55rem 0.9rem;
+      font-size: 0.93rem;
+      border: 1px solid #cfe5ee;
+      color: #0f2933;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      box-shadow: 0 3px 6px rgba(15, 23, 42, 0.03);
+      transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+      user-select: none;
+    }
+
+    .chip:hover {
+      border-color: var(--color-accent);
+      background-color: var(--color-accent-soft);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 14px rgba(15, 23, 42, 0.12);
+    }
+
+    /* Experience */
+    .experience-section {
+      background-color: #ffffff;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2.5rem;
+      flex-wrap: wrap;              /* will wrap on small screens */
+      margin-bottom: 1.2rem;
+    }
+
+    .exp-col {
+      flex: 1 1 0;                  /* three equal columns */
+    }
+
+    .exp-row {
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+      margin-bottom: 0.35rem;
+      font-size: 0.96rem;
+    }
+
+    .exp-label {
+      min-width: 110px;             /* tune this so columns line up nicely */
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.78rem;
+      color: var(--color-text-muted);
+    }
+
+    .exp-value {
+      font-weight: 500;
+      color: var(--color-text-main, #111827);
+    }
+
+    /* existing styles for what I worked on */
+    .exp-subheading {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin: 1rem 0 0.4rem;
+      color: var(--color-text-muted);
+    }
+
+    .exp-list {
+      padding-left: 1.1rem;
+      margin: 0;
+      list-style: disc;
+      color: var(--color-text-muted);
+      font-size: 0.97rem;
+    }
+
+    .exp-list li {
+      margin-bottom: 0.55rem;
+      line-height: 1.6;
+    }
+
+    /* Education */
+    .education-section {
+      background-color: #050515;
+      color: #F9FAFA;
+    }
+
+    .education-section .section-heading {
+      color: #F9FAFA;
+    }
+
+    .edu-table-wrapper {
+      overflow-x: auto;
+      margin-top: 1.8rem;
+    }
+
+    .edu-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+      color: #F9FAFA;
+    }
+
+    .edu-table tr + tr {
+      border-top: 1px solid rgba(249, 250, 250, 0.24);
+    }
+
+    .edu-table td {
+      padding: 1.1rem 0;
+      vertical-align: top;
+    }
+
+    .edu-table td:nth-child(1),
+    .edu-table td:nth-child(2),
+    .edu-table td:nth-child(3)
+    {
+      font-size: 0.82rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      padding-right: 2rem;
+    }
+
+    .edu-table td:nth-child(1) {
+      font-weight: 600;
+      padding-right: 2rem;
+    }
+
+    .edu-table td:nth-child(2) {
+      padding-right: 2rem;
+    }
+
+    .edu-table td:nth-child(3) {
+      padding-right: 2rem;
+    }
+
+    .edu-table td:nth-child(4) {
+      font-size: 0.9rem;
+      color: rgba(249, 250, 250, 0.8);
+      line-height: 1.7;
+    }
+
+        /* New inner blocks */
+    .edu-grade {
+      font-weight: 600;
+      margin-bottom: 0.4rem;      /* visual separation from modules */
+    }
+
+    .edu-modules {
+      font-size: 0.88rem;
+      opacity: 0.9;
+    }
+
+    /* Projects */
+    .projects-section {
+      background-color: var(--color-bg-projects);
+    }
+
+        /* carousel shell */
+    .projects-carousel {
+      position: relative;
+      margin-top: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    /* viewport: only 3 cards visible */
+    .projects-viewport {
+      overflow: hidden;
+      flex: 1;
+    }
+
+    /* track: horizontal row of cards */
+    .projects-track {
+      display: flex;
+      transition: transform 0.4s ease;
+      gap: 1.2rem; 
+    }
+
+    /* each card: same as before but fixed width for 3-at-a-time */
+    .project-card {
+      background-color: #ffffff;
+      border-radius: var(--radius-card);
+      padding: 1.4rem 1.5rem;
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      min-width: calc((100% / 3) - (1.2rem * 2 / 3));
+      box-sizing: border-box;
+    }
+
+    /* nav buttons */
+    .projects-nav {
+      background: #ffffff;
+      border-radius: 999px;
+      border: 1px solid var(--color-border);
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      cursor: pointer;
+      color: var(--color-text-muted);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .projects-nav:hover {
+      background-color: #f3f4f6;
+    }
+
+    .projects-nav.prev {
+      margin-right: 0.25rem;
+    }
+
+    .projects-nav.next {
+      margin-left: 0.25rem;
+    }
+
+    /* small screens: fall back to 1 or 2 cards */
+    @media (max-width: 900px) {
+      .project-card {
+        min-width: 50%; /* 2 cards */
+      }
+    }
+
+    @media (max-width: 640px) {
+      .project-card {
+        min-width: 100%; /* 1 card */
+      }
+    }
+
+    /* inner text styles (unchanged) */
+    .project-title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .project-subtitle {
+      font-size: 0.9rem;
+      color: var(--color-accent);
+      margin-bottom: 0.7rem;
+    }
+
+    .project-list {
+      padding-left: 1.1rem;
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--color-text-muted);
+    }
+
+    .project-list li {
+      margin-bottom: 0.45rem;
+    }
+
+    /* Contact / footer */
+    .contact-section {
+      background-color: var(--color-bg-footer);
+      color: #e5e7eb;
+      padding: 55px 16px 35px;
+    }
+
+    .contact-heading {
+      color: #f9fafb;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    .contact-details {
+      font-size: 0.96rem;
+      line-height: 1.7;
+    }
+
+    .contact-details a {
+      color: #f9fafb;
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .footer-meta {
+      font-size: 0.82rem;
+      color: #9ca3af;
+      margin-top: 1.4rem;
+    }
+
+    /* Utilities */
+    .section-intro {
+      max-width: 720px;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .chips-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 768px) {
+      .chips-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .header-name {
+        font-size: 2.4rem;
+      }
+
+      .header-role {
+        font-size: 1.2rem;
+      }
+
+      .header-band {
+        padding-top: 80px;
+        padding-bottom: 70px;
+      }
+
+      .header-buttons {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-end;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      section {
+        padding: 55px 16px;
+      }
+
+      .card,
+      .project-card {
+        padding: 1.3rem 1.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .section-heading {
+        font-size: 1.5rem;
+      }
+
+      .about-text {
+        font-size: 0.98rem;
+      }
+
+      .chips-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header band -->
+  <header class="header-band">
+    <div class="header-inner">
+      <h1 class="header-name">Vaishnavi Raghavan</h1>
+      <p class="header-role">Business Analyst &amp; Data Operations</p>
+      <p class="header-tagline">Part-time detective, full-time problem solver</p>
+      <div class="header-meta">
+        <span>Dublin, Ireland&nbsp;&middot;&nbsp;</span>
+        <span>
+          <a href="https://linkedin.com/in/vaishnavi-raghavan-pro2k" target="_blank" rel="noopener">
+            Connect with me on LinkedIn
+          </a>
+        </span>
+      </div>
+      <div class="header-buttons">
+        <a href="VAISHNAVI RAGHAVAN.pdf" class="btn btn-primary">MY CV</a>
+        <a href="#contact" class="btn btn-ghost">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About me -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <h2 class="section-heading">About me</h2>
+      <div class="about-text">
+        <p>
+          I work in data operations and production support and I’m moving towards business analysis. I like understanding how
+          systems, data and people fit together, especially when something goes wrong. My background in Business Analytics means
+          I’m comfortable with SQL, Python and dashboards, but also with thinking about business impact.
+        </p>
+        <p>
+          I’m doing the Cloud Resume Challenge to understand the AWS world my data lives in – purely for context, not because I secretly want to become 
+          a full‑time cloud engineer.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="skills-section" id="skills">
+    <div class="container">
+      <h2 class="section-heading">Skills</h2>
+
+      <div class="skills-groups">
+        <div class="skills-group">
+          <h3 class="skills-subheading">Business analysis</h3>
+          <div class="chips-grid">
+            <div class="chip">Requirements gathering</div>
+            <div class="chip">Requirements documentation</div>
+            <div class="chip">Process mapping</div>
+            <div class="chip">Gap analysis</div>
+            <div class="chip">Use cases &amp; scenarios</div>
+            <div class="chip">Data analysis</div>
+            <div class="chip">Data Modelling</div>
+            <div class="chip">Reporting &amp; KPIs</div>
+            <div class="chip">Problem-solving</div>
+          </div>
+        </div>
+
+        <div class="skills-group">
+          <h3 class="skills-subheading">Data &amp; tools</h3>
+          <div class="chips-grid">
+            <div class="chip">SQL</div>
+            <div class="chip">MS Excel</div>
+            <div class="chip">Power BI</div>
+            <div class="chip">Python</div>
+            <div class="chip">Linux</div>
+            <div class="chip">Power Automate</div>
+            <div class="chip">IBM DataStage</div>
+            <div class="chip">Cognos</div>
+            <div class="chip">Tableau</div>
+            <div class="chip">Visio</div>
+            <div class="chip">LucidChart</div>
+            <div class="chip">Figma</div>
+          </div>
+        </div>
+
+        <div class="skills-group">
+          <h3 class="skills-subheading">Delivery</h3>
+          <div class="chips-grid">
+            <div class="chip">Stakeholder communication</div>
+            <div class="chip">Documentation</div>
+            <div class="chip">KT Training</div>
+            <div class="chip">ServiceNow</div>
+            <div class="chip">Microsoft 365</div>
+            <div class="chip">SharePoint</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="experience-section" id="experience">
+    <div class="container">
+      <h2 class="section-heading">Experience</h2>
+  
+      <div class="exp-block">
+        <div class="exp-header">
+          <div class="exp-col">
+            <div class="exp-row">
+              <span class="exp-label">Company</span>
+              <span class="exp-value">Infosys Limited</span>
+            </div>
+            <div class="exp-row">
+              <span class="exp-label">Title</span>
+              <span class="exp-value">Senior System Associate</span>
+            </div>
+          </div>
+      
+          <div class="exp-col">
+            <div class="exp-row">
+              <span class="exp-label">Department</span>
+              <span class="exp-value">Data Operations &amp; BI</span>
+            </div>
+            <div class="exp-row">
+              <span class="exp-label">Tenure</span>
+              <span class="exp-value">Jul 2021 – Jul 2023</span>
+            </div>
+          </div>
+      
+          <div class="exp-col">
+            <div class="exp-row">
+              <span class="exp-label">Location</span>
+              <span class="exp-value">Pune, India</span>
+            </div>
+          </div>
+        </div>
+  
+        <div class="exp-what-i-did">
+          <h3 class="exp-subheading">What I worked on</h3>
+          <ul class="exp-list">
+            <li>Kept critical ETL and reporting jobs running in a 24/7 environment, stepping in when pipelines failed and seeing incidents through to closure.</li>
+            <li>Used SQL, Power BI and Excel to turn incident logs into SLA, MTTR and trend views that made patterns and bottlenecks easy to spot.</li>
+            <li>Investigated pipeline failures by combining log analysis and SQL checks, then recorded clear root‑cause notes so the same issue was less likely to come back.</li>
+            <li>Applied data quality checks (validation, reconciliation, monitoring) before data hit dashboards, so stakeholders saw fewer surprises in their reports.</li>
+            <li>Documented runbooks and process steps and delivered KT sessions so fixes were reusable by the wider support team.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--Education-->
+  <section class="education-section" id="education">
+    <div class="container">
+      <h2 class="section-heading">Education</h2>
+  
+      <div class="edu-table-wrapper">
+        <table class="edu-table">
+          <tbody>
+            <tr>
+              <td>Master of Science <br> Business Analytics</td>
+              <td>
+                UCD Michael Smurfit<br>
+                Graduate Business School<br><br>
+                <em>Dublin, Ireland</em>
+              </td>
+              <td>09/2023 – 12/2024</td>
+              <td>
+                <div class="edu-grade">
+                  <b></b>GPA: 3.4
+                </div>
+                <div class="edu-modules">
+                  <em>Key modules:</em> Data Analytics, Data Visualisation, Predictive Modelling,
+                  Databases, Programming for Analytics, Business Problem-Solving.
+                </div>
+              </td>
+            </tr>
+  
+            <tr>
+              <td>Bachelor of Science <br> Computer Science</td>
+              <td>
+                Avinashilingam University<br><br>
+                <em>Coimbatore, India</em>
+              </td>
+              <td>06/2018 – 08/2021</td>
+              <td>
+                <div class="edu-grade">
+                  <b>CGPA:</b> 7.8
+                </div>
+                <div class="edu-modules">
+                  <em>Key modules:</em> Algorithms &amp; Data Structures, Databases,
+                  Operating Systems, Networking, Programming, Software Engineering.
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="projects-section" id="projects">
+    <div class="container">
+      <h2 class="section-heading">Projects</h2>
+
+      <div class="projects-carousel">
+        <button class="projects-nav prev" aria-label="Previous projects">&#10094;</button>
+
+        <div class="projects-viewport">
+          <div class="projects-track">
+        <!-- Project 1 -->
+        <article class="project-card">
+          <div class="project-title">Incident Analytics Process Improvement Tracker</div>
+          <div class="project-subtitle">Power BI, DAX, Power Query, ServiceNow</div>
+          <ul class="project-list">
+            <li>
+              Built a star-schema Power BI model using SQL and Power Query to extract and transform 500+ monthly ServiceNow incident
+              records for SLA and MTTR tracking.
+            </li>
+            <li>
+              Developed DAX measures and validation rules that highlighted bottlenecks and supported actions leading to an 
+              18% reduction in repeat incidents and clearer visibility into SLA trends.
+            </li>
+          </ul>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card">
+          <div class="project-title">Survey Workflow Automation</div>
+          <div class="project-subtitle">Power Automate, Google Sheets</div>
+          <ul class="project-list">
+            <li>
+              Developed a Power Automate cloud flow triggered by Microsoft Forms submissions to automatically populate Excel and
+              route feedback using conditional logic.
+            </li>
+            <li>
+              Eliminated manual data entry and follow-up for surveys by automating notifications and routing, 
+              achieving real-time data capture.
+            </li>
+          </ul>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card">
+          <div class="project-title">Traffic Fatality Analysis of Ireland</div>
+          <div class="project-subtitle">Excel, Trend analysis, Regression</div>
+          <ul class="project-list">
+            <li>
+              Cleaned and standardised a 15-year dataset (2008–2023), handling missing values and validating totals across
+              inconsistent reporting periods.
+            </li>
+            <li>
+              Applied longitudinal trend analysis and descriptive statistics to assess the impact of safety policies, communicating
+              a documented 47% reduction in fatalities through clear visualisations.
+            </li>
+          </ul>
+        </article>
+
+         <!-- Project 4 -->
+         <article class="project-card">
+          <div class="project-title">Energy Demand Forecasting – Ireland 2035</div>
+          <div class="project-subtitle">Python, Trend analysis, Machine Learning</div>
+          <ul class="project-list">
+            <li>
+              Simulated a national energy agency project by synthesising 10+ years of demand data from economic, demographic, 
+              weather and utility consumption sources.
+            </li>
+            <li>
+              Trained and compared Linear Regression and XGBoost models, improving 2035 demand prediction accuracy by around 15% 
+              to support renewable capacity planning.
+            </li>
+          </ul>
+        </article>
+
+         <!-- Project 5 -->
+         <article class="project-card">
+          <div class="project-title">E‑commerce Logistics Optimisation</div>
+          <div class="project-subtitle">VRP, Python, Optimization</div>
+          <ul class="project-list">
+            <li>
+              Designed Simultaneous and Non‑Simultaneous Pickup & Delivery models to optimise forward and reverse e‑commerce
+               logistics under capacity, cost and emissions constraints.
+            </li>
+            <li>
+              Applied routing algorithms that achieved 25.1% cost reduction and 26.9% emissions reduction in the simultaneous
+               model, supporting greener last‑mile planning.
+            </li>
+          </ul>
+        </article>
+
+         <!-- Project 6 -->
+         <article class="project-card">
+          <div class="project-title">Global Airline Traffic amid COVID‑19</div>
+          <div class="project-subtitle">Tableau, Dashboard, Excel</div>
+          <ul class="project-list">
+            <li>
+              Designed an interactive Tableau dashboard to monitor global airline traffic throughout the COVID‑19 shock 
+              and recovery period, modelling KPIs such as passenger volumes, available seat capacity, load factor, route 
+              profitability proxies and traffic recovery indices across regions and corridors..
+            </li>
+            <li>
+              Enabled user to explore country and corridor‑level recovery patterns via filters and drill‑downs,
+               supporting data‑driven discussions on travel policy.
+            </li>
+          </ul>
+        </article>
+
+         <!-- Project 7 -->
+         <article class="project-card">
+          <div class="project-title">Cloud Resume Challenge</div>
+          <div class="project-subtitle">AWS, HTML, CSS</div>
+          <ul class="project-list">
+            <li>
+              Completed the AWS Cloud Resume Challenge by building a responsive HTML/CSS resume site hosted as an S3 static website, 
+              structured to showcase experience, skills and projects on the AWS free tier.
+            </li>
+            <li>
+              Implemented a serverless visitor‑counter backend using API Gateway, Lambda and DynamoDB, wiring it to the frontend with
+               JavaScript so each page load persists and displays the updated visit count..
+            </li>
+          </ul>
+        </article>
+      </div>
+    </div>
+
+    <button class="projects-nav next" aria-label="Next projects">&#10095;</button>
+  </div>
+</div>
+</section>
+
+  <!-- Contact / footer -->
+  <footer class="contact-section" id="contact">
+    <div class="container">
+      <h2 class="contact-heading">Contact</h2>
+      <div class="contact-details">
+        <div>Email: <a href="mailto:vaishnaviraghavan.ind@gmail.com">vaishnaviraghavan.ind@gmail.com</a></div>
+        <div>Location: Dublin, Ireland</div>
+        <div>
+          <a href="https://linkedin.com/in/vaishnavi-raghavan-pro2k" target="_blank" rel="noopener">
+            LinkedIn
+          </a>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <p>
+          © <span id="year"></span> Vaishnavi Raghavan • Resume
+          <span style="float: right;">
+            Total Views: <span id="visitor-count">...</span>
+          </span>
+        </p>        
+        <script src="script.js"></script>
+      </div>
+    </div>
+    
+    <!---Javascript carousol-->
+    <script>
+      (function () {
+        const track = document.querySelector('.projects-track');
+        const cards = Array.from(track.children);
+        const visibleCount = 3;
+    
+        if (!track || cards.length <= visibleCount) return;
+    
+        // Clone first and last N cards for seamless loop
+        const firstClones = cards.slice(0, visibleCount).map(card => card.cloneNode(true));
+        const lastClones = cards.slice(-visibleCount).map(card => card.cloneNode(true));
+    
+        firstClones.forEach(clone => track.appendChild(clone));
+        lastClones.reverse().forEach(clone => track.insertBefore(clone, track.firstChild));
+    
+        const allCards = Array.from(track.children);
+        let index = visibleCount; // start after the prepended clones
+    
+        const updateTransform = () => {
+          const cardWidth = allCards[0].getBoundingClientRect().width;
+          track.style.transform = `translateX(-${index * cardWidth}px)`;
+        };
+    
+        // Initial offset
+        window.addEventListener('load', updateTransform);
+        window.addEventListener('resize', updateTransform);
+    
+        const nextBtn = document.querySelector('.projects-nav.next');
+        const prevBtn = document.querySelector('.projects-nav.prev');
+    
+        const jumpIfNeeded = () => {
+          const total = allCards.length;
+          const realCount = cards.length;
+    
+          if (index >= total - visibleCount) {
+            // jumped past the last real slide -> snap back into real range
+            index = visibleCount;
+            track.style.transition = 'none';
+            updateTransform();
+            // force reflow then restore transition
+            requestAnimationFrame(() => {
+              track.style.transition = 'transform 0.4s ease';
+            });
+          } else if (index < visibleCount) {
+            // jumped before first real slide
+            index = realCount + visibleCount - 1;
+            track.style.transition = 'none';
+            updateTransform();
+            requestAnimationFrame(() => {
+              track.style.transition = 'transform 0.4s ease';
+            });
+          }
+        };
+    
+        nextBtn.addEventListener('click', () => {
+          index++;
+          updateTransform();
+          track.addEventListener('transitionend', jumpIfNeeded, { once: true });
+        });
+    
+        prevBtn.addEventListener('click', () => {
+          index--;
+          updateTransform();
+          track.addEventListener('transitionend', jumpIfNeeded, { once: true });
+        });
+      })();
+    </script>
+    <script>
+      // Simple year display, no external dependencies
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+</body>
+</html>

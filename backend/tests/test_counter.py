@@ -1,4 +1,4 @@
-from lambda_function import increment_count
+from backend.lambda_function import increment_count
 
 def test_increment_count_from_zero():
     assert increment_count(0) == 1
